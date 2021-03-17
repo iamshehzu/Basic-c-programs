@@ -1,0 +1,35 @@
+//multi structural program
+//finding area using structures
+//by shahzad haider
+#include<iostream>
+
+using namespace std;
+
+struct Distance{
+	
+	int feet;
+	float inches;
+	
+};
+
+struct Home{
+	
+	Distance length; 
+	Distance width;  };
+
+int main () {
+	
+	Home room;
+	cout<<" enter the inches of length : "; cin>>room.length.inches;
+	cout<<" enter the feets of length : "; cin>>room.length.feet;
+	
+	cout<<" \n enter the inches of width of : ";cin>>room.width.inches;
+	cout<<" enter the feet of width : "; cin>>room.width.feet;
+	
+	float l,b;
+	l = room.length.feet+room.length.inches/12;
+	b= room.width.feet+room.width.inches/12;
+	cout<<" the area of your room is : "<<l*b;
+	
+	
+}
