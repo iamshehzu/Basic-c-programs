@@ -1,0 +1,55 @@
+//four function calculator using return type function
+//made by shahzad haider
+
+#include<iostream>
+
+using namespace std;
+
+float sum(float,float);
+float sub(float ,float);
+float mul(float,float);
+float div(float,float);
+
+int main() {
+	
+	float num1,num2;
+	char op;
+	cout<<" enter first no : ";
+	cin>>num1;
+	cout<<" enter operator : ";
+	cin>>op;
+	cout<<" enter second no : ";
+	cin>>num2;
+	
+	if ( op == '+') {
+		
+		cout<<" the result is : "<<sum(num1, num2 );
+	} else if ( op == '-') {
+		
+		cout<<" the result is : "<<sub(num1, num2 );
+	}  else if ( op == '*') {
+		
+		cout<<" the result is : "<<mul(num1, num2 );
+	}  else if ( op == '/') {
+		
+		cout<<" the result is : "<<div(num1, num2 );
+	}
+}
+
+
+float sum ( float num1, float num2 ){
+	float result = num1+num2;
+	return result;}
+	
+float sub ( float num1, float num2 ){
+	float result = num1-num2;
+	return result;}
+	
+	float mul ( float num1, float num2 ){
+	float result = num1*num2;
+	return result;}
+	
+	float div ( float num1, float num2 ){
+	float result = num1/num2;
+	return result;}
+		
