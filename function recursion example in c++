@@ -1,0 +1,51 @@
+//function recursion example in c++
+//by shahzad haider
+
+#include<iostream>
+using namespace std;
+
+ static void ah(  ){
+     float num1,num2;
+     
+	char ch;
+	
+	cout <<"Enter first number:";
+	cin>>num1;
+	
+	cout<<"Enter second number :";
+	cin>>num2;
+	
+    cout <<"Enter op:";
+    cin>>ch;
+    
+    if(ch=='+'){
+    	cout<<"Answer:"<<num1+num2<<endl;
+    	
+	}
+	else if(ch=='-'){
+		cout<<"Answer:"<<num1-num2;
+		
+	}
+	char e;
+	
+	cout<<"Do you want to continue?(y/n):";
+	
+	cin>>e;
+	
+	if(e=='y'){
+		ah();
+	}
+	else 
+	cout<<"end..";
+	
+
+}
+
+
+
+int main () {
+
+	
+	ah(  );
+  return 0;
+}
