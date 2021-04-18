@@ -1,0 +1,92 @@
+//calculator using concepts of binary operator in OOP c++
+//Author : Shahzad Haider
+
+#include<iostream>
+
+using namespace std;
+
+class Test{ //Test class starts
+    
+    float num1;
+	 
+	 public:
+	 Test( float n ){ //constructor 
+	 	num1=n;
+	 }
+	  
+	 Test operator+( Test t)//this Test parameter takes argument form main
+	 {  //function of + operator 
+	 	Test t3(0);             //t3 is zero coz there is constructor so value should be given 
+	 	t3.num1=num1+t.num1;   
+	 	return t3;              
+	 }
+	 
+	  Test operator-( Test t)
+	  {  //function of + operator 
+	 	Test t3(0);             //t3 is third object in which holds the results of 2 objects
+	 	t3.num1=num1-t.num1;     
+	 	return t3;              
+	 } 
+   
+	 Test operator*( Test t) 
+	 {  //function of + operator 
+	 	Test t3(0);             
+	 	t3.num1=num1*t.num1;    
+	 	return t3;             
+	 }  
+	 
+	 Test operator/( Test t)
+	 {  //function of + operator 
+	 	Test t3(0);              
+	 	t3.num1=num1/t.num1;    
+	 	return t3;              
+	 } 
+   
+   
+	 void display(){
+	 	cout<<num1;  //it will display the resultant value of num1 
+	 }
+   
+};
+
+int main (){
+    float x,y; //here x and y of type float declared which we can send through constructors 
+    char ch;   
+    cout<<" enter the first value : ";
+    cin>>x;
+    cout<<" enter operator (+,-,/,*) :";
+    cin>>ch;
+    cout<<" enter the second value : ";
+    cin>>y; 
+    
+   
+	Test t1(x);         
+	Test t2(y);
+	Test sum(0);         
+    if (ch == '-') 
+	{
+   	   sum=t1-t2;  
+	   sum.display(); }
+	   
+	else if ( ch == '+')
+	{
+		 sum=t1+t2;  
+	   sum.display();
+	}
+		else if ( ch == '*')
+	{
+		 sum=t1*t2;  
+	   sum.display();
+	}
+		else if ( ch == '/')
+	{
+		 sum=t1/t2;  
+	   sum.display();
+	} else {
+		
+		cout<<" invalid input "<<endl;
+	} 
+  return 0;
+  
+  }
+	
